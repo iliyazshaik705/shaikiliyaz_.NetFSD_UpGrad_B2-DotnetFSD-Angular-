@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Enrollment Form</title>
+</head>
+<body>
+
+<header>
+    <h1>Online Learning Platform - Course Enrollment</h1>
+</header>
+
+
+<hr>
+
+<main>
+    <section>
+        <h2>Enrollment Form</h2>
+
+        <!-- Static Progress Bar -->
+        <p>Enrollment Completion Progress:</p>
+        <progress value="70" max="100"></progress>
+        <p>70% Completed</p>
+
+        <hr>
+
+        <form action="#" method="post">
+
+            <!-- Email -->
+            <div>
+                <label for="email">Email Address:</label><br>
+                <input type="email" id="email" name="email" required placeholder="example@email.com">
+            </div>
+
+            <br>
+
+            <!-- Course Selection with Datalist -->
+            <div>
+                <label for="course">Select Course:</label><br>
+                <input list="course-options" id="course" name="course" required placeholder="Choose or type a course">
+
+                <datalist id="course-options">
+                    <option value="HTML Fundamentals">
+                    <option value="CSS Basics">
+                    <option value="JavaScript Essentials">
+                    <option value="Python Programming">
+                    <option value="Data Science Introduction">
+                </datalist>
+            </div>
+
+            <br>
+
+            <!-- Number Input -->
+            <div>
+                <label for="experience">Years of Experience:</label><br>
+                <meter value="0.6" min="0" max="1" low="0.5" high="0.8" optimum="0.9"></meter>
+            </div>
+
+            <br>
+
+            <!-- Range Input -->
+            <div>
+                <label for="interest">Interest Level (1–10):</label><br>
+                <input type="range" id="interest" name="interest" min="1" max="10" value="5">
+            </div>
+
+            <br>
+
+            <!-- Skill Level Meter -->
+            <div>
+                <label>Skill Level:</label><br>
+                <meter value="0.6" min="0" max="1" low="0.5" high="0.8" optimum="0.9"></meter>
+                <p>Beginner → Intermediate → Advanced</p>
+            </div>
+
+            <br><br>
+
+            <!-- Submit Button -->
+            <div>
+                <button type="submit">Enroll Now</button>
+            </div>
+
+        </form>
+    </section>
+</main>
+    
+</body>
+</html>
+
