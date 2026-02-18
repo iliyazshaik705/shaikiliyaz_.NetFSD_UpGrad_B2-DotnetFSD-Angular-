@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Responsive Blog Layout</title>
+
+<style>
+
+/* Global Styles */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f7fa;
+    color: #faf5f5;
+}
+
+/* Header */
+header {
+    background-color: #1e1e2f;
+    color: white;
+    text-align: center;
+    padding: 1.5rem 1rem;
+    letter-spacing: 1px;
+}
+
+/* Main Section */
+main {
+    padding: 2rem 5%;
+}
+
+/* Responsive Grid WITHOUT media queries */
+.blog-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+/* Blog Card */
+.blog-card {
+    background-color: rgb(77, 3, 3);
+    padding: 1.5rem;
+    border: 1px solid #d39d9d;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: 0.3s ease;
+}
+
+/* Hover Effect */
+.blog-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(14, 155, 26, 0.08);
+}
+
+/* Title */
+.blog-card h3 {
+    margin-top: 0;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+/* Description */
+.blog-card p {
+    line-height: 1.6;
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Button */
+.read-btn {
+    padding: 0.5rem 1rem;
+    border: none;
+    background-color: #0077ff;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.read-btn:hover {
+    background-color: #005fcc;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>My Blog</h1>
+</header>
+
+<main>
+    <div class="blog-container">
+
+        <div class="blog-card">
+            <h3>Understanding CSS Grid</h3>
+            <p>Learn how Grid creates powerful and flexible layouts without complicated code.</p>
+            <button class="read-btn">Read More</button>
+        </div>
+
+        <div class="blog-card">
+            <h3>Mastering Flexbox</h3>
+            <p>Flexbox makes alignment and spacing simple and efficient for modern web design.</p>
+            <button class="read-btn">Read More</button>
+        </div>
+
+        <div class="blog-card">
+            <h3>Responsive Design Principles</h3>
+            <p>Build layouts that adapt naturally to different screen sizes.</p>
+            <button class="read-btn">Read More</button>
+        </div>
+
+        <div class="blog-card">
+            <h3>Typography in UI</h3>
+            <p>Improve readability and hierarchy using spacing and font styling techniques.</p>
+            <button class="read-btn">Read More</button>
+        </div>
+
+        <div class="blog-card">
+            <h3>CSS Box Model</h3>
+            <p>Understand margins, padding, and borders for precise layout control.</p>
+            <button class="read-btn">Read More</button>
+        </div>
+
+    </div>
+</main>
+
+</body>
+</html>

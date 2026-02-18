@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Profile Card</title>
+
+    <style>
+        /* Page Styling */
+        body {
+            background-color: #95abcc;
+            font-family: Arial, Helvetica, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        /* Profile Card */
+        .card {
+            background-color: #25ca99;
+            width: 500px;
+            padding: 25px;              /* Box Model - Padding */
+            border: 2px solid #e0e0e0;  /* Box Model - Border */
+            border-radius: 12px;        /* Rounded Corners */
+            margin: 20px;               /* Box Model - Margin */
+            text-align: center;         /* Text Alignment */
+        }
+
+        /* Name */
+        .card h1 {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 5px;
+            letter-spacing: 1px;        /* Typography Enhancement */
+        }
+
+        /* Role */
+        .role {
+            font-size: 16px;
+            font-weight: 600;
+            color: #171817;
+            margin-bottom: 15px;
+            text-transform: uppercase;  /* Text Decoration */
+        }
+
+        /* Bio */
+        .bio {
+            font-size: 14px;
+            line-height: 1.6;           /* Typography Enhancement */
+            color: #edf7f8;
+            margin-bottom: 20px;
+        }
+
+        /* Button */
+        .contact-btn {
+            background-color: #791945;
+            color: white;
+            padding: 10px 18px;
+            border: none;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        /* Hover Effect */
+        .contact-btn:hover {
+            background-color: #196934;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <h1>SHAIK ILIYAZ</h1>
+        <div class="role">Front-End Developer</div>
+        <p class="bio">
+            Passionate about building clean, responsive, and user-friendly web interfaces.
+            I enjoy turning ideas into real-world digital experiences.
+        </p>
+        <button class="contact-btn">Contact Me</button>
+    </div>
+
+</body>
+</html>
