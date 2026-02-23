@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Personal Notes</title>
+</head>
+<body>
+    <h2>Personal Notes</h2>
+
+    <input id="notes" placeholder="Write Daily notes">
+    <button onclick="saveNotes()">Save</button>
+    <button onclick="clearNote()">Clear</button>
+
+    <p id="display"></p>
+
+    <script>
+        function saveNotes() {
+            let text = document.getElementById("notes").value;
+            
+            localStorage.setItem("myNote", text);
+            document.getElementById("display").innerText =
+                "Saved Note: " + text;
+        }
+
+        function clearNote() {
+            localStorage.removeItem("myNote");
+            document.getElementById("notes").value = "";
+            document.getElementById("display").innerText = "";
+        }
+
+        // Load saved note when page refreshes
+        window.onload = function () {
+            let saved = localStorage.getItem("myNote");
+            if (saved !== null) {
+                document.getElementById("notes").value = saved;
+                document.getElementById("display").innerText =
+                    "Saved Note: " + saved;
+            }
+        };
+    </script>
+</body>
+</html>
