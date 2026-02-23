@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Profile Manager</title>
+    <style>
+        #profileCard {
+            border: 2px solid #333;
+            padding: 15px;
+            width: 250px;
+            border-radius: 10px;
+            background-color: #f4f4f4;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Student Profile</h2>
+
+    <div id="profileCard"></div>
+
+    <br>
+    <button id="updateMarksBtn">Update Marks</button>
+
+    <script>
+
+        // ✅ Global Student Object
+        var student = {
+            name: "shaik yasmin",
+            rollNo: 57,
+            marks: 75
+        };
+
+        // Function to display student details
+        function updateStudentProfile(studentObj) {
+
+            var content = 
+                "<p><strong>Name:</strong> " + studentObj.name + "</p>" +
+                "<p><strong>Roll No:</strong> " + studentObj.rollNo + "</p>" +
+                "<p><strong>Marks:</strong> " + studentObj.marks + "</p>";
+
+            document.getElementById("profileCard").innerHTML = content;
+        }
+
+        // Function to update marks
+        function updateMarks(newMarks) {
+            student.marks = newMarks;  // updating global object
+            updateStudentProfile(student); // refresh UI
+        }
+
+        // Initial Display
+        updateStudentProfile(student);
+
+        // Button Event
+        document.getElementById("updateMarksBtn").addEventListener("click", function() {
+            var newMarks = prompt("Enter new marks:");
+            updateMarks(newMarks);
+        });
+
+    </script>
+
+</body>
+</html>
