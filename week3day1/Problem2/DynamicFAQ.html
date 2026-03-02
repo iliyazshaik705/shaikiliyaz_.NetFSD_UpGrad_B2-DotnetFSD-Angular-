@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dynamic FAQ Section</title>
+
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            background-color: #f4f4f4;
+        }
+
+        .faq-container {
+            width: 600px;
+            margin: auto;
+        }
+
+        .faq-item {
+            background: #fff;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            padding: 10px 15px;
+            cursor: pointer;
+            border: 1px solid #ddd;
+        }
+
+        .question {
+            font-weight: bold;
+        }
+
+        .answer {
+            display: none;
+            margin-top: 8px;
+            color: #555;
+        }
+
+        .active {
+            background-color: #e7f1ff;
+            border-color: #007BFF;
+        }
+    </style>
+</head>
+<body>
+
+<div class="faq-container">
+    <h2>Frequently Asked Questions</h2>
+
+    <div class="faq-item">
+        <div class="question">1. What courses do you offer?</div>
+        <div class="answer">We offer Web Development, Data Science, Python, and UI/UX courses.</div>
+    </div>
+
+    <div class="faq-item">
+        <div class="question">2. How can I enroll in a course?</div>
+        <div class="answer">You can enroll online through our website registration form.</div>
+    </div>
+
+    <div class="faq-item">
+        <div class="question">3. Do you provide certificates?</div>
+        <div class="answer">Yes, we provide industry-recognized certificates after course completion.</div>
+    </div>
+
+    <div class="faq-item">
+        <div class="question">4. Are classes live or recorded?</div>
+        <div class="answer">We provide both live sessions and recorded materials for flexibility.</div>
+    </div>
+
+    <div class="faq-item">
+        <div class="question">5. What is the course duration?</div>
+        <div class="answer">Course duration ranges from 4 to 12 weeks depending on the program.</div>
+    </div>
+
+</div>
+
+<script>
+$(document).ready(function(){
+
+    $(".faq-item").click(function(){
+
+        // Toggle the clicked answer smoothly
+        $(this).find(".answer").slideToggle();
+
+        // Highlight selected question
+        $(this).toggleClass("active");
+
+    });
+
+});
+</script>
+
+</body>
+</html>

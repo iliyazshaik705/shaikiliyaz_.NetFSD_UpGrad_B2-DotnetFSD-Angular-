@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Product List - Add to Cart</title>
+
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            background-color: #f4f6f8;
+        }
+
+        .header {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        #cartCount {
+            color: #fff;
+            background-color: #28a745;
+            padding: 5px 10px;
+            border-radius: 50%;
+        }
+
+        .product-container {
+            display: flex;
+            gap: 20px;
+        }
+
+        .product {
+            background: #fff;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            width: 200px;
+            text-align: center;
+        }
+
+        .product button {
+            padding: 8px 12px;
+            margin-top: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .product button:disabled {
+            background-color: gray;
+            cursor: not-allowed;
+        }
+
+        .confirmation {
+            color: green;
+            font-size: 13px;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    🛒 Cart Items: <span id="cartCount">0</span>
+</div>
+
+<div class="product-container" id="productList">
+
+    <div class="product">
+        <h4>Product 1</h4>
+        <p>$20</p>
+        <button class="addToCart">Add to Cart</button>
+        <div class="confirmation"></div>
+    </div>
+
+    <div class="product">
+        <h4>Product 2</h4>
+        <p>$35</p>
+        <button class="addToCart">Add to Cart</button>
+        <div class="confirmation"></div>
+    </div>
+
+    <div class="product">
+        <h4>Product 3</h4>
+        <p>$50</p>
+        <button class="addToCart">Add to Cart</button>
+        <div class="confirmation"></div>
+    </div>
+
+    <div class="product">
+        <h4>Product 4</h4>
+        <p>$75</p>
+        <button class="addToCart">Add to Cart</button>
+        <div class="confirmation"></div>
+    </div>
+
+</div>
+
+<script>
+$(document).ready(function(){
+
+    var cartCounter = 0;
+
+    // Event Delegation
+    $("#productList").on("click", ".addToCart", function(){
+
+        cartCounter++;
+
+        // Update cart counter using .text()
+        $("#cartCount").text(cartCounter);
+
+        // Disable button using .prop()
+        $(this).prop("disabled", true);
+
+        // Change button text using .text()
+        $(this).text("Added");
+
+        // Optional: Add attribute using .attr()
+        $(this).attr("data-added", "true");
+
+        // Display confirmation message
+        $(this).siblings(".confirmation")
+               .text("✔ Product added successfully!");
+
+    });
+
+});
+</script>
+
+</body>
+</html>
